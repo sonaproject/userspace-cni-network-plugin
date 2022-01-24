@@ -115,6 +115,9 @@ help:
 build: generate
 	@cd userspace && go build -v
 
+docker-build:
+	@sudo docker build -t registry.gitlab.com/sonaproject/ovs-dpdk-cni-plugin .
+
 test-app:
 	@cd cnivpp/test/memifAddDel && go build -v
 	@cd cnivpp/test/vhostUserAddDel && go build -v
